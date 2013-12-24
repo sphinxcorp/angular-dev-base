@@ -26,7 +26,8 @@
 		"load-grunt-tasks": "~0.2.0",
 		"time-grunt": "~0.2.3",
 		"glob": "3.x",
-		"sockjs": "0.3.x"
+		"sockjs": "0.3.x",
+		"connect-rest": "0.7.x"
 	},
 	"engines": {
 		"node": "0.8.x",
