@@ -55,7 +55,8 @@
                         livereload: true,
                         middleware: require('./middleware'),
                         open: true,
-                        port: 3333
+                        port: 3333,
+                        onCreateServer: require('./sockjs')
                     }
                 }
             },
@@ -100,6 +101,11 @@
                         }, {
                             cwd: 'bower_components/requirejs/',
                             src: 'require.js',
+                            dest: '.temp/libs/',
+                            expand: true
+                        }, {
+                            cwd: 'bower_components/sockjs/',
+                            src: 'sockjs.*',
                             dest: '.temp/libs/',
                             expand: true
                         }
@@ -303,8 +309,9 @@
                             'bootstrap': 'phone/scripts/bootstrap'
                         }
                     },
-                    src: [ 'phone/scripts/**/*.js', 'libs/**/*.js', '!libs/angular.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}'],
+                    src: [ 'phone/scripts/**/*.js', 'libs/**/*.js', '!libs/sockjs.{coffee,js}', '!libs/angular.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}'],
                     order: [
+                        'libs/sockjs.min.js',
                         'libs/angular.min.js', {
                             'NGAPP': {
                                 'ngAnimate': 'libs/angular-animate.min.js',
@@ -325,8 +332,9 @@
                             'bootstrap': 'phone/scripts/bootstrap'
                         }
                     },
-                    src: [ 'phone/scripts/**/*.js', 'libs/**/*.js', '!libs/angular.{coffee,js}', '!libs/angular-mocks.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}', '!phone/scripts/backend/**/*.*'],
+                    src: [ 'phone/scripts/**/*.js', 'libs/**/*.js', '!libs/sockjs.{coffee,js}', '!libs/angular.{coffee,js}', '!libs/angular-mocks.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}', '!phone/scripts/backend/**/*.*'],
                     order: [
+                        'libs/sockjs.min.js',
                         'libs/angular.min.js', {
                             'NGAPP': {
                                 'ngAnimate': 'libs/angular-animate.min.js',
@@ -346,8 +354,9 @@
                             'bootstrap': 'tablet/scripts/bootstrap'
                         }
                     },
-                    src: [ 'tablet/scripts/**/*.js', 'libs/**/*.js', '!libs/angular.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}'],
+                    src: [ 'tablet/scripts/**/*.js', 'libs/**/*.js', '!libs/sockjs.{coffee,js}', '!libs/angular.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}'],
                     order: [
+                        'libs/sockjs.min.js',
                         'libs/angular.min.js', {
                             'NGAPP': {
                                 'ngAnimate': 'libs/angular-animate.min.js',
@@ -368,8 +377,9 @@
                             'bootstrap': 'tablet/scripts/bootstrap'
                         }
                     },
-                    src: [ 'tablet/scripts/**/*.js', 'libs/**/*.js', '!libs/angular.{coffee,js}', '!libs/angular-mocks.{coffee,js}', '!libs/angular-mocks.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}', '!tablet/scripts/backend/**/*.*'],
+                    src: [ 'tablet/scripts/**/*.js', 'libs/**/*.js', '!libs/sockjs.{coffee,js}', '!libs/angular.{coffee,js}', '!libs/angular-mocks.{coffee,js}', '!libs/angular-mocks.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}', '!tablet/scripts/backend/**/*.*'],
                     order: [
+                        'libs/sockjs.min.js',
                         'libs/angular.min.js', {
                             'NGAPP': {
                                 'ngAnimate': 'libs/angular-animate.min.js',
@@ -389,8 +399,9 @@
                             'bootstrap': 'desktop/scripts/bootstrap'
                         }
                     },
-                    src: [ 'desktop/scripts/**/*.js', 'libs/**/*.js', '!libs/angular.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}'],
+                    src: [ 'desktop/scripts/**/*.js', 'libs/**/*.js', '!libs/sockjs.{coffee,js}', '!libs/angular.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}'],
                     order: [
+                        'libs/sockjs.min.js',
                         'libs/angular.min.js', {
                             'NGAPP': {
                                 'ngAnimate': 'libs/angular-animate.min.js',
@@ -411,8 +422,9 @@
                             'bootstrap': 'desktop/scripts/bootstrap'
                         }
                     },
-                    src: [ 'desktop/scripts/**/*.js', 'libs/**/*.js', '!libs/angular.{coffee,js}', '!libs/angular-mocks.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}', '!desktop/scripts/backend/**/*.*'],
+                    src: [ 'desktop/scripts/**/*.js', 'libs/**/*.js', '!libs/sockjs.{coffee,js}', '!libs/angular.{coffee,js}', '!libs/angular-mocks.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}', '!desktop/scripts/backend/**/*.*'],
                     order: [
+                        'libs/sockjs.min.js',
                         'libs/angular.min.js', {
                             'NGAPP': {
                                 'ngAnimate': 'libs/angular-animate.min.js',

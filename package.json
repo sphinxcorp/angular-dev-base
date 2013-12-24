@@ -15,16 +15,18 @@
 		"grunt-coffeelint": "~0.0.7",
 		"grunt-contrib-clean": "~0.5.0",
 		"grunt-contrib-coffee": "~0.7.0",
-		"grunt-contrib-connect": "~0.5.0",
+		"grunt-contrib-connect": "sphinxcorp/grunt-hustler",
 		"grunt-contrib-copy": "~0.4.1",
 		"grunt-contrib-imagemin": "~0.4.0",
 		"grunt-contrib-jade": "~0.8.0",
 		"grunt-contrib-requirejs": "~0.4.1",
 		"grunt-contrib-uglify": "~0.2.7",
 		"grunt-contrib-watch": "~0.5.3",
-		"grunt-hustler": "https://github.com/sphinxcorp/grunt-hustler/archive/v4.0.6.tar.gz",
+		"grunt-hustler": "sphinxcorp/grunt-hustler#v4.0.6",
 		"load-grunt-tasks": "~0.2.0",
-		"time-grunt": "~0.2.3"
+		"time-grunt": "~0.2.3",
+		"glob": "3.x",
+		"sockjs": "0.3.x"
 	},
 	"engines": {
 		"node": "0.8.x",

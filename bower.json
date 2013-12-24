@@ -8,6 +8,7 @@
 		"angular-route": "1.2.4",
 		"html5shiv": "~3.7.0",
 		"json3": "~3.2.6",
+		"sockjs": "~0.3",
 		"requirejs": "~2.1.9"
 	}
 }
