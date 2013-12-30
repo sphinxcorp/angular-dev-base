@@ -1,14 +1,18 @@
 (function() {
-  module.exports = function(server, connect) {
+  module.exports = function(server, connect, options) {
     var sockjs = require('sockjs');
     var path = require('path');
     var glob = require('glob');
     var fs = require('fs');
 
-    var socketOptions = {
+    var sockjsOptions = {
       sockjs_url: "http://cdn.sockjs.org/sockjs-0.3.min.js",
       prefix: '/livefeed'
     };
+
+    if(options.sockjsOptions){
+      sockjsOptions = options.sockjsOptions;
+    }
     
     var options = {
       interval: 1000,
@@ -42,7 +46,7 @@
       tref = setTimeout(broadcast, 1000);
     };
 
-    var socketServer = sockjs.createServer(socketOptions);
+    var socketServer = sockjs.createServer(sockjsOptions);
     
     socketServer.on('connection', function(conn) {
       console.log('connection started');

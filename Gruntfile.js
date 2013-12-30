@@ -49,12 +49,30 @@
                 }
             },
             connect: {
-                app: {
+                dev: {
                     options: {
                         base: 'dist/',
                         livereload: true,
                         middleware: require('./backend/middleware'),
                         onCreateServer: require('./backend/socketServer'),
+                        sockjsOptions: {
+                            sockjs_url: "/libs/sockjs.min.js",
+                            prefix: '/livefeed'
+                        },
+                        open: true,
+                        port: 3333                        
+                    }
+                },
+                prod: {
+                    options: {
+                        base: 'dist/',
+                        livereload: false,
+                        middleware: require('./backend/middleware'),
+                        onCreateServer: require('./backend/socketServer'),
+                        sockjsOptions: {
+                            sockjs_url: "http://cdn.sockjs.org/sockjs-0.3.min.js",
+                            prefix: '/livefeed'
+                        },
                         open: true,
                         port: 3333                        
                     }
@@ -516,9 +534,9 @@
         });
 
         grunt.registerTask('build', ['clean:working', 'copy:app', 'shimmer:phoneDev', 'shimmer:tabletDev', 'shimmer:desktopDev', 'coffee:app', 'template:indexDev', 'copy:dev', 'clean:coffee']);
-        grunt.registerTask('dev', ['build', 'connect', 'watch']);
+        grunt.registerTask('dev', ['build', 'connect:dev', 'watch']);
         grunt.registerTask('prod', ['clean:working', 'copy:app', 'ngTemplateCache', 'shimmer:phoneProd', 'shimmer:tabletProd', 'shimmer:desktopProd', 'coffee:app', 'imagemin', 'hash:images', 'requirejs', 'uglify', 'hash:scripts', 'hash:styles', 'template:index', 'copy:prod', 'clean:coffee']);
-        grunt.registerTask('server', ['connect', 'watch:none']);
+        grunt.registerTask('server', ['connect:prod', 'watch:none']);
         return grunt.registerTask('default', ['dev']);
     };
 
