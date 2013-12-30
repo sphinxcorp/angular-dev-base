@@ -41,6 +41,7 @@
 		<ng:include src="'/views/site.html'"></ng:include> -->
 
 		<% if (config.environment && config.environment === 'prod') { %>
+			<script src="http://cdn.sockjs.org/sockjs-0.3.min.js"></script>
 			<script src="<%= config.getHashedFile('./.temp/tablet/scripts/scripts.min.js', {trim: './.temp'}) %>"></script>
 		<% } else { %>
 			<script data-main="/tablet/scripts/main.js" src="/libs/require.js"></script>

@@ -11,9 +11,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<% if (config.environment && config.environment === 'prod') { %>
-			<link rel="stylesheet" href="<%= config.getHashedFile('./.temp/phone/styles/styles.min.css', {trim: './.temp'}) %>" />
+			<!--[if lte IE 8]> <script src="<%= config.getHashedFile('./.temp/desktop/scripts/ie.min.js', {trim: './.temp'}) %>"></script> <![endif]-->
+
+			<link rel="stylesheet" href="<%= config.getHashedFile('./.temp/desktop/styles/styles.min.css', {trim: './.temp'}) %>" />
 		<% } else { %>
-			<link rel="stylesheet" href="/phone/styles/styles.css" />
+			<!--[if lte IE 8]> <script src="/scripts/libs/json3.js"></script> <script src="/scripts/libs/html5shiv-printshiv.js"></script> <![endif]-->
+
+			<link rel="stylesheet" href="/desktop/styles/styles.css" />
 		<% } %>
 
 		<!-- ClickJacking Defense begin (https://www.owasp.org/index.php/Clickjacking_Defense_Cheat_Sheet) -->
@@ -37,13 +41,14 @@
 		<!-- ClickJacking Defense end -->
 	</head>
 	<body ng-cloak class="ng-cloak">
-		<!-- <ng:view></ng:view>
-		<ng:include src="'/views/site.html'"></ng:include> -->
+		<ng:view></ng:view>
+		<ng:include src="'/desktop/views/site.html'"></ng:include>
 
 		<% if (config.environment && config.environment === 'prod') { %>
-			<script src="<%= config.getHashedFile('./.temp/phone/scripts/scripts.min.js', {trim: './.temp'}) %>"></script>
+			<script src="http://cdn.sockjs.org/sockjs-0.3.min.js"></script>
+			<script src="<%= config.getHashedFile('./.temp/desktop/scripts/scripts.min.js', {trim: './.temp'}) %>"></script>
 		<% } else { %>
-			<script data-main="/phone/scripts/main.js" src="/libs/require.js"></script>
+			<script data-main="/desktop/scripts/main.js" src="/libs/require.js"></script>
 		<% } %>
 	</body>
 </html>

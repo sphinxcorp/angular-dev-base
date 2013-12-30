@@ -53,10 +53,10 @@
                     options: {
                         base: 'dist/',
                         livereload: true,
-                        middleware: require('./service/middleware'),
+                        middleware: require('./backend/middleware'),
+                        onCreateServer: require('./backend/socketServer'),
                         open: true,
-                        port: 3333,
-                        onCreateServer: require('./service/socketServer')
+                        port: 3333                        
                     }
                 }
             },
@@ -64,7 +64,7 @@
                 app: {
                     files: [
                         {
-                            cwd: 'src/',
+                            cwd: 'frontend/',
                             src: '**',
                             dest: '.temp/',
                             expand: true
@@ -311,7 +311,6 @@
                     },
                     src: [ 'common/scripts/**/*.js', 'phone/scripts/**/*.js', 'libs/**/*.js', '!libs/sockjs.{coffee,js}', '!libs/angular.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}'],
                     order: [
-                        'libs/sockjs.min.js',
                         'libs/angular.min.js', {
                             'NGAPP': {
                                 'ngAnimate': 'libs/angular-animate.min.js',
@@ -332,9 +331,8 @@
                             'bootstrap': 'phone/scripts/bootstrap'
                         }
                     },
-                    src: [ 'common/scripts/**/*.js', 'phone/scripts/**/*.js', 'libs/**/*.js', '!libs/sockjs.{coffee,js}', '!libs/angular.{coffee,js}', '!libs/angular-mocks.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}', '!phone/scripts/backend/**/*.*'],
+                    src: [ 'common/scripts/**/*.js', 'phone/scripts/**/*.js', 'libs/**/*.js', '!libs/sockjs.*', '!libs/angular.{coffee,js}', '!libs/angular-mocks.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}', '!phone/scripts/backend/**/*.*'],
                     order: [
-                        'libs/sockjs.min.js',
                         'libs/angular.min.js', {
                             'NGAPP': {
                                 'ngAnimate': 'libs/angular-animate.min.js',
@@ -377,13 +375,12 @@
                             'bootstrap': 'tablet/scripts/bootstrap'
                         }
                     },
-                    src: [ 'common/scripts/**/*.js', 'tablet/scripts/**/*.js', 'libs/**/*.js', '!libs/sockjs.{coffee,js}', '!libs/angular.{coffee,js}', '!libs/angular-mocks.{coffee,js}', '!libs/angular-mocks.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}', '!tablet/scripts/backend/**/*.*'],
+                    src: [ 'common/scripts/**/*.js', 'tablet/scripts/**/*.js', 'libs/**/*.js', '!libs/sockjs.*', '!libs/angular.{coffee,js}', '!libs/angular-mocks.{coffee,js}', '!libs/angular-mocks.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}', '!tablet/scripts/backend/**/*.*'],
                     order: [
-                        'libs/sockjs.min.js',
                         'libs/angular.min.js', {
                             'NGAPP': {
                                 'ngAnimate': 'libs/angular-animate.min.js',
-                                'ngRoute': 'libs/angular-route.min.js'
+                                'ngRoute': 'libs/angular-route.min.js',
                             }
                         }
                     ],
@@ -407,7 +404,7 @@
                                 'ngAnimate': 'libs/angular-animate.min.js',
                                 'ngMockE2E': 'libs/angular-mocks.js',
                                 'ngRoute': 'libs/angular-route.min.js'
-                            }
+                            },
                         }
                     ],
                     dest: 'desktop/scripts/',
@@ -422,13 +419,12 @@
                             'bootstrap': 'desktop/scripts/bootstrap'
                         }
                     },
-                    src: [ 'common/scripts/**/*.js', 'desktop/scripts/**/*.js', 'libs/**/*.js', '!libs/sockjs.{coffee,js}', '!libs/angular.{coffee,js}', '!libs/angular-mocks.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}', '!desktop/scripts/backend/**/*.*'],
+                    src: [ 'common/scripts/**/*.js', 'desktop/scripts/**/*.js', 'libs/**/*.js', '!libs/sockjs.*', '!libs/angular.{coffee,js}', '!libs/angular-mocks.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}', '!desktop/scripts/backend/**/*.*'],
                     order: [
-                        'libs/sockjs.min.js',
                         'libs/angular.min.js', {
                             'NGAPP': {
                                 'ngAnimate': 'libs/angular-animate.min.js',
-                                'ngRoute': 'libs/angular-route.min.js'
+                                'ngRoute': 'libs/angular-route.min.js',
                             }
                         }
                     ],
@@ -462,7 +458,7 @@
             },
             watch: {
                 basic: {
-                    files: ['src/fonts/**', 'src/images/**', 'src/scripts/**/*.js', 'src/styles/**/*.css', 'src/**/*.html'],
+                    files: ['frontend/fonts/**', 'frontend/images/**', 'frontend/scripts/**/*.js', 'frontend/styles/**/*.css', 'frontend/**/*.html'],
                     tasks: ['copy:app', 'copy:dev'],
                     options: {
                         livereload: true,
@@ -470,7 +466,7 @@
                     }
                 },
                 coffee: {
-                    files: 'src/scripts/**/*.coffee',
+                    files: 'frontend/scripts/**/*.{coffee,js}',
                     tasks: ['clean:working', 'copy:app', 'shimmer:phoneDev', 'shimmer:tabletDev', 'shimmer:desktopDev', 'coffee:app', 'copy:dev'],
                     options: {
                         livereload: true,
@@ -478,7 +474,7 @@
                     }
                 },
                 spaHtml: {
-                    files: 'src/**/index.html',
+                    files: 'frontend/**/index.html',
                     tasks: ['copy:app', 'template:indexDev', 'copy:dev'],
                     options: {
                         livereload: true,
@@ -488,7 +484,7 @@
                 none: {
                     files: 'none',
                     options: {
-                        livereload: true
+                        livereload: false
                     }
                 }
             }
@@ -502,7 +498,7 @@
             ext = path.extname(file);
             basename = path.basename(file, ext);
             grunt.config(['copy', 'app'], {
-                cwd: 'src/',
+                cwd: 'frontend/',
                 src: file,
                 dest: '.temp/',
                 expand: true

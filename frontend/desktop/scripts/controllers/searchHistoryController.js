@@ -7,7 +7,9 @@
       this.$log = $log;
       this.messageService = messageService;
       this.searchHistory = [];
+      
       this.messageService.subscribe('search', function(name, parameters) {
+        _this.$log.info('search listener invoked');
         return _this.searchHistory.push(parameters);
       });
     }

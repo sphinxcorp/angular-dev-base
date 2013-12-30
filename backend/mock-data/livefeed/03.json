@@ -1,0 +1,7 @@
+{
+	"updateType": "match-update",
+	"updateDetails": {
+		"id": 1,
+		"state": "timeout"
+	}
+}

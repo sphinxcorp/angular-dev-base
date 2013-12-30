@@ -8,6 +8,7 @@
     }
 
     Service.prototype.publish = function(name, parameters) {
+      // this.$log.info('publishing message for ' + name);
       var params;
       params = angular.extend({}, parameters, {
         timeStamp: Date.now()
