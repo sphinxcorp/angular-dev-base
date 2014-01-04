@@ -318,7 +318,7 @@
                         preserveLicenseComments: false,
                         skipModuleInsertion: true,
                         uglify: {
-                            no_mangle: false
+                            no_mangle: true
                         },
                         useStrict: true,
                         wrap: {
@@ -365,7 +365,7 @@
                             'bootstrap': 'phone/scripts/bootstrap'
                         }
                     },
-                    src: [ 'common/scripts/**/*.js', 'phone/scripts/**/*.js', 'libs/**/*.js', '!libs/sockjs.*', '!libs/angular.{coffee,js}', '!libs/angular-mocks.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-resource.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}', '!phone/scripts/backend/**/*.*'],
+                    src: [ 'common/scripts/**/*.js', 'phone/scripts/**/*.js', 'libs/**/*.js', '!libs/sockjs.*', '!libs/angular.{coffee,js}', '!libs/angular-mocks.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-resource.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}', '!common/scripts/backend/**/*.*', '!phone/scripts/backend/**/*.*'],
                     order: [
                         'libs/angular.min.js', {
                             'NGAPP': ngAppDependencies.prod
@@ -402,7 +402,7 @@
                             'bootstrap': 'tablet/scripts/bootstrap'
                         }
                     },
-                    src: [ 'common/scripts/**/*.js', 'tablet/scripts/**/*.js', 'libs/**/*.js', '!libs/sockjs.*', '!libs/angular.{coffee,js}', '!libs/angular-mocks.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-resource.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}', '!tablet/scripts/backend/**/*.*'],
+                    src: [ 'common/scripts/**/*.js', 'tablet/scripts/**/*.js', 'libs/**/*.js', '!libs/sockjs.*', '!libs/angular.{coffee,js}', '!libs/angular-mocks.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-resource.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}', '!common/scripts/backend/**/*.*', '!tablet/scripts/backend/**/*.*'],
                     order: [
                         'libs/angular.min.js', {
                             'NGAPP': ngAppDependencies.prod
@@ -439,7 +439,7 @@
                             'bootstrap': 'desktop/scripts/bootstrap'
                         }
                     },
-                    src: [ 'common/scripts/**/*.js', 'desktop/scripts/**/*.js', 'libs/**/*.js', '!libs/sockjs.*', '!libs/angular.{coffee,js}', '!libs/angular-mocks.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-resource.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}', '!desktop/scripts/backend/**/*.*'],
+                    src: [ 'common/scripts/**/*.js', 'desktop/scripts/**/*.js', 'libs/**/*.js', '!libs/sockjs.*', '!libs/angular.{coffee,js}', '!libs/angular-mocks.{coffee,js}', '!libs/angular-animate.{coffee,js}', '!libs/angular-resource.{coffee,js}', '!libs/angular-route.{coffee,js}', '!libs/html5shiv-printshiv.{coffee,js}', '!libs/json3.min.{coffee,js}', '!libs/require.{coffee,js}', '!common/scripts/backend/**/*.*', '!desktop/scripts/backend/**/*.*'],
                     order: [
                         'libs/angular.min.js', {
                             'NGAPP': ngAppDependencies.prod

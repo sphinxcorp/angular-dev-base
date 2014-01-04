@@ -1,7 +1,13 @@
 {
 	"updateType": "match-update",
-	"updateDetails": {
-		"id": 1,
-		"state": "started"
-	}
+	"updateDetails": [
+		{
+			"id": 1,
+			"selected_team_id": 16,
+			"status": "pre-game",
+			"pick_enabled": true,
+			"current_point": 70,
+			"switching_point": 30
+		}
+	]
 }

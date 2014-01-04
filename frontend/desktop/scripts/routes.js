@@ -3,11 +3,7 @@
 
   Config = (function() {
     function Config($routeProvider) {
-      $routeProvider.when('/github/:id', {
-        controller: 'gitHubController'
-      }).otherwise({
-        redirectTo: '/github'
-      });
+      // define custom routes here
     }
 
     return Config;

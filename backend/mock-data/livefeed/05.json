@@ -1,4 +1,13 @@
 {
-	"id": 5,
-	"state": "postponed"
+	"updateType": "match-update",
+	"updateDetails": [
+		{
+			"id": 1,
+			"selected_team_id": 1,
+			"status": "timeout",
+			"pick_enabled": false,
+			"current_point": 40,
+			"switching_point": 15
+		}
+	]
 }
