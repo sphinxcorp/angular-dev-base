@@ -1,6 +1,7 @@
 (function() {
 	var rest = require('connect-rest');
 	var fs = require('fs');
+	var glob = require('glob');
 
 	var options = {
 		discoverPath: 'discover',
@@ -24,23 +25,43 @@
 			return callback( error );
 		}
 
-		var resourcePath = dataPath + method + '/' + resource + '.json';
+		var resourcePath = dataPath + method + '/' + resource;
 
-		console.log('checking file existance' + resourcePath);
+		var data = {};
 
-		if(!fs.existsSync(resourcePath)){
-			var error = new Error('resource not found');
-			error.statusCode = 404;
-			return callback( error );	
+		if(fs.existsSync(resourcePath) && fs.statSync(resourcePath).isDirectory()){
+			var dataFiles = glob.sync('*.json',{
+      			cwd: resourcePath,
+      			silent: true
+    		});
+
+    		for(var fileIndex=0; fileIndex < dataFiles.length; fileIndex++){
+    			var fileName = dataFiles[fileIndex];
+    			var dataKey = fileName.replace(/\.json$/,'');
+
+    			data[dataKey] = JSON.parse(
+					fs.readFileSync(resourcePath + '/' + fileName,{
+						encoding: 'UTF-8'
+					})
+				);
+    		}
 		}
+		else {
+			resourcePath = resourcePath + '.json';
+			if(!fs.existsSync(resourcePath)){
+				var error = new Error('resource not found');
+				error.statusCode = 404;
+				return callback( error );
+			}
 
-		return callback(null, 
-			JSON.parse(
+			data = JSON.parse(
 				fs.readFileSync(resourcePath,{
 					encoding: 'UTF-8'
 				})
-			)
-		);
+			);
+		}
+
+		return callback(null, data);
 	};
 
 	module.exports = function(connect, app, options) {

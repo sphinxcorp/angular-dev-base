@@ -1,0 +1,450 @@
+{
+	"team-1": {
+		"id": 1,
+		"region_id": 1,
+		"regional_seed": 1,
+		"name": "Midwest 1",
+		"short_name": "MDW 1"
+	},
+	"team-2": {
+		"id": 2,
+		"region_id": 1,
+		"regional_seed": 2,
+		"name": "Midwest 2",
+		"short_name": "MDW 2"
+	},
+	"team-3": {
+		"id": 3,
+		"region_id": 1,
+		"regional_seed": 3,
+		"name": "Midwest 3",
+		"short_name": "MDW 3"
+	},
+	"team-4": {
+		"id": 4,
+		"region_id": 1,
+		"regional_seed": 4,
+		"name": "Midwest 4",
+		"short_name": "MDW 4"
+	},
+	"team-5": {
+		"id": 5,
+		"region_id": 1,
+		"regional_seed": 5,
+		"name": "Midwest 5",
+		"short_name": "MDW 5"
+	},
+	"team-6": {
+		"id": 6,
+		"region_id": 1,
+		"regional_seed": 6,
+		"name": "Midwest 6",
+		"short_name": "MDW 6"
+	},
+	"team-7": {
+		"id": 7,
+		"region_id": 1,
+		"regional_seed": 7,
+		"name": "Midwest 7",
+		"short_name": "MDW 7"
+	},
+	"team-8": {
+		"id": 8,
+		"region_id": 1,
+		"regional_seed": 8,
+		"name": "Midwest 8",
+		"short_name": "MDW 8"
+	},
+	"team-9": {
+		"id": 9,
+		"region_id": 1,
+		"regional_seed": 9,
+		"name": "Midwest 9",
+		"short_name": "MDW 9"
+	},
+	"team-10": {
+		"id": 10,
+		"region_id": 1,
+		"regional_seed": 10,
+		"name": "Midwest 10",
+		"short_name": "MDW 10"
+	},
+	"team-11": {
+		"id": 11,
+		"region_id": 1,
+		"regional_seed": 11,
+		"name": "Midwest 11",
+		"short_name": "MDW 11"
+	},
+	"team-12": {
+		"id": 12,
+		"region_id": 1,
+		"regional_seed": 12,
+		"name": "Midwest 12",
+		"short_name": "MDW 12"
+	},
+	"team-13": {
+		"id": 13,
+		"region_id": 1,
+		"regional_seed": 13,
+		"name": "Midwest 13",
+		"short_name": "MDW 13"
+	},
+	"team-14": {
+		"id": 14,
+		"region_id": 1,
+		"regional_seed": 14,
+		"name": "Midwest 14",
+		"short_name": "MDW 14"
+	},
+	"team-15": {
+		"id": 15,
+		"region_id": 1,
+		"regional_seed": 15,
+		"name": "Midwest 15",
+		"short_name": "MDW 15"
+	},
+	"team-16": {
+		"id": 16,
+		"region_id": 1,
+		"regional_seed": 16,
+		"name": "Midwest 16",
+		"short_name": "MDW 16"
+	},
+	"team-17": {
+		"id": 17,
+		"region_id": 2,
+		"regional_seed": 1,
+		"name": "East 1",
+		"short_name": "EST 1"
+	},
+	"team-18": {
+		"id": 18,
+		"region_id": 2,
+		"regional_seed": 2,
+		"name": "East 2",
+		"short_name": "EST 2"
+	},
+	"team-19": {
+		"id": 19,
+		"region_id": 2,
+		"regional_seed": 3,
+		"name": "East 3",
+		"short_name": "EST 3"
+	},
+	"team-20": {
+		"id": 20,
+		"region_id": 2,
+		"regional_seed": 4,
+		"name": "East 4",
+		"short_name": "EST 4"
+	},
+	"team-21": {
+		"id": 21,
+		"region_id": 2,
+		"regional_seed": 5,
+		"name": "East 5",
+		"short_name": "EST 5"
+	},
+	"team-22": {
+		"id": 22,
+		"region_id": 2,
+		"regional_seed": 6,
+		"name": "East 6",
+		"short_name": "EST 6"
+	},
+	"team-23": {
+		"id": 23,
+		"region_id": 2,
+		"regional_seed": 7,
+		"name": "East 7",
+		"short_name": "EST 7"
+	},
+	"team-24": {
+		"id": 24,
+		"region_id": 2,
+		"regional_seed": 8,
+		"name": "East 8",
+		"short_name": "EST 8"
+	},
+	"team-25": {
+		"id": 25,
+		"region_id": 2,
+		"regional_seed": 9,
+		"name": "East 9",
+		"short_name": "EST 9"
+	},
+	"team-26": {
+		"id": 26,
+		"region_id": 2,
+		"regional_seed": 10,
+		"name": "East 10",
+		"short_name": "EST 10"
+	},
+	"team-27": {
+		"id": 27,
+		"region_id": 2,
+		"regional_seed": 11,
+		"name": "East 11",
+		"short_name": "EST 11"
+	},
+	"team-28": {
+		"id": 28,
+		"region_id": 2,
+		"regional_seed": 12,
+		"name": "East 12",
+		"short_name": "EST 12"
+	},
+	"team-29": {
+		"id": 29,
+		"region_id": 2,
+		"regional_seed": 13,
+		"name": "East 13",
+		"short_name": "EST 13"
+	},
+	"team-30": {
+		"id": 30,
+		"region_id": 2,
+		"regional_seed": 14,
+		"name": "East 14",
+		"short_name": "EST 14"
+	},
+	"team-31": {
+		"id": 31,
+		"region_id": 2,
+		"regional_seed": 15,
+		"name": "East 15",
+		"short_name": "EST 15"
+	},
+	"team-32": {
+		"id": 32,
+		"region_id": 2,
+		"regional_seed": 16,
+		"name": "East 16",
+		"short_name": "EST 16"
+	},
+	"team-33": {
+		"id": 33,
+		"region_id": 3,
+		"regional_seed": 1,
+		"name": "West 1",
+		"short_name": "WST 1"
+	},
+	"team-34": {
+		"id": 34,
+		"region_id": 3,
+		"regional_seed": 2,
+		"name": "West 2",
+		"short_name": "WST 2"
+	},
+	"team-35": {
+		"id": 35,
+		"region_id": 3,
+		"regional_seed": 3,
+		"name": "West 3",
+		"short_name": "WST 3"
+	},
+	"team-36": {
+		"id": 36,
+		"region_id": 3,
+		"regional_seed": 4,
+		"name": "West 4",
+		"short_name": "WST 4"
+	},
+	"team-37": {
+		"id": 37,
+		"region_id": 3,
+		"regional_seed": 5,
+		"name": "West 5",
+		"short_name": "WST 5"
+	},
+	"team-38": {
+		"id": 38,
+		"region_id": 3,
+		"regional_seed": 6,
+		"name": "West 6",
+		"short_name": "WST 6"
+	},
+	"team-39": {
+		"id": 39,
+		"region_id": 3,
+		"regional_seed": 7,
+		"name": "West 7",
+		"short_name": "WST 7"
+	},
+	"team-40": {
+		"id": 40,
+		"region_id": 3,
+		"regional_seed": 8,
+		"name": "West 8",
+		"short_name": "WST 8"
+	},
+	"team-41": {
+		"id": 41,
+		"region_id": 3,
+		"regional_seed": 9,
+		"name": "West 9",
+		"short_name": "WST 9"
+	},
+	"team-42": {
+		"id": 42,
+		"region_id": 3,
+		"regional_seed": 10,
+		"name": "West 10",
+		"short_name": "WST 10"
+	},
+	"team-43": {
+		"id": 43,
+		"region_id": 3,
+		"regional_seed": 11,
+		"name": "West 11",
+		"short_name": "WST 11"
+	},
+	"team-44": {
+		"id": 44,
+		"region_id": 3,
+		"regional_seed": 12,
+		"name": "West 12",
+		"short_name": "WST 12"
+	},
+	"team-45": {
+		"id": 45,
+		"region_id": 3,
+		"regional_seed": 13,
+		"name": "West 13",
+		"short_name": "WST 13"
+	},
+	"team-46": {
+		"id": 46,
+		"region_id": 3,
+		"regional_seed": 14,
+		"name": "West 14",
+		"short_name": "WST 14"
+	},
+	"team-47": {
+		"id": 47,
+		"region_id": 3,
+		"regional_seed": 15,
+		"name": "West 15",
+		"short_name": "WST 15"
+	},
+	"team-48": {
+		"id": 48,
+		"region_id": 3,
+		"regional_seed": 16,
+		"name": "West 16",
+		"short_name": "WST 16"
+	},
+	"team-49": {
+		"id": 49,
+		"region_id": 4,
+		"regional_seed": 1,
+		"name": "South 1",
+		"short_name": "STH 1"
+	},
+	"team-50": {
+		"id": 50,
+		"region_id": 4,
+		"regional_seed": 2,
+		"name": "South 2",
+		"short_name": "STH 2"
+	},
+	"team-51": {
+		"id": 51,
+		"region_id": 4,
+		"regional_seed": 3,
+		"name": "South 3",
+		"short_name": "STH 3"
+	},
+	"team-52": {
+		"id": 52,
+		"region_id": 4,
+		"regional_seed": 4,
+		"name": "South 4",
+		"short_name": "STH 4"
+	},
+	"team-53": {
+		"id": 53,
+		"region_id": 4,
+		"regional_seed": 5,
+		"name": "South 5",
+		"short_name": "STH 5"
+	},
+	"team-54": {
+		"id": 54,
+		"region_id": 4,
+		"regional_seed": 6,
+		"name": "South 6",
+		"short_name": "STH 6"
+	},
+	"team-55": {
+		"id": 55,
+		"region_id": 4,
+		"regional_seed": 7,
+		"name": "South 7",
+		"short_name": "STH 7"
+	},
+	"team-56": {
+		"id": 56,
+		"region_id": 4,
+		"regional_seed": 8,
+		"name": "South 8",
+		"short_name": "STH 8"
+	},
+	"team-57": {
+		"id": 57,
+		"region_id": 4,
+		"regional_seed": 9,
+		"name": "South 9",
+		"short_name": "STH 9"
+	},
+	"team-58": {
+		"id": 58,
+		"region_id": 4,
+		"regional_seed": 10,
+		"name": "South 10",
+		"short_name": "STH 10"
+	},
+	"team-59": {
+		"id": 59,
+		"region_id": 4,
+		"regional_seed": 11,
+		"name": "South 11",
+		"short_name": "STH 11"
+	},
+	"team-60": {
+		"id": 60,
+		"region_id": 4,
+		"regional_seed": 12,
+		"name": "South 12",
+		"short_name": "STH 12"
+	},
+	"team-61": {
+		"id": 61,
+		"region_id": 4,
+		"regional_seed": 13,
+		"name": "South 13",
+		"short_name": "STH 13"
+	},
+	"team-62": {
+		"id": 62,
+		"region_id": 4,
+		"regional_seed": 14,
+		"name": "South 14",
+		"short_name": "STH 14"
+	},
+	"team-63": {
+		"id": 63,
+		"region_id": 4,
+		"regional_seed": 15,
+		"name": "South 15",
+		"short_name": "STH 15"
+	},
+	"team-64": {
+		"id": 64,
+		"region_id": 4,
+		"regional_seed": 16,
+		"name": "South 16",
+		"short_name": "STH 16"
+	}
+}

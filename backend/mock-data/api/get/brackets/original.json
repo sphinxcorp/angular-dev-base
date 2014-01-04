@@ -1,0 +1,1262 @@
+{
+	"match-1": {
+		"id": 1,
+		"round_id": 1,
+		"region_id": 1,
+		"teams": [
+			16,
+			1
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 33,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-2": {
+		"id": 2,
+		"round_id": 1,
+		"region_id": 1,
+		"teams": [
+			8,
+			9
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 33,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-3": {
+		"id": 3,
+		"round_id": 1,
+		"region_id": 1,
+		"teams": [
+			5,
+			12
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 34,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-4": {
+		"id": 4,
+		"round_id": 1,
+		"region_id": 1,
+		"teams": [
+			4,
+			13
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 34,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-5": {
+		"id": 5,
+		"round_id": 1,
+		"region_id": 1,
+		"teams": [
+			6,
+			11
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 35,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-6": {
+		"id": 6,
+		"round_id": 1,
+		"region_id": 1,
+		"teams": [
+			3,
+			14
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 35,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-7": {
+		"id": 7,
+		"round_id": 1,
+		"region_id": 1,
+		"teams": [
+			7,
+			10
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 36,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-8": {
+		"id": 8,
+		"round_id": 1,
+		"region_id": 1,
+		"teams": [
+			2,
+			15
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 36,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-9": {
+		"id": 9,
+		"round_id": 1,
+		"region_id": 2,
+		"teams": [
+			32,
+			17
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 37,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-10": {
+		"id": 10,
+		"round_id": 1,
+		"region_id": 2,
+		"teams": [
+			24,
+			25
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 37,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-11": {
+		"id": 11,
+		"round_id": 1,
+		"region_id": 2,
+		"teams": [
+			21,
+			28
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 38,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-12": {
+		"id": 12,
+		"round_id": 1,
+		"region_id": 2,
+		"teams": [
+			20,
+			29
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 38,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-13": {
+		"id": 13,
+		"round_id": 1,
+		"region_id": 2,
+		"teams": [
+			22,
+			27
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 39,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-14": {
+		"id": 14,
+		"round_id": 1,
+		"region_id": 2,
+		"teams": [
+			19,
+			30
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 39,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-15": {
+		"id": 15,
+		"round_id": 1,
+		"region_id": 2,
+		"teams": [
+			23,
+			26
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 40,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-16": {
+		"id": 16,
+		"round_id": 1,
+		"region_id": 2,
+		"teams": [
+			18,
+			31
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 40,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-17": {
+		"id": 17,
+		"round_id": 1,
+		"region_id": 3,
+		"teams": [
+			48,
+			33
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 41,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-18": {
+		"id": 18,
+		"round_id": 1,
+		"region_id": 3,
+		"teams": [
+			40,
+			41
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 41,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-19": {
+		"id": 19,
+		"round_id": 1,
+		"region_id": 3,
+		"teams": [
+			37,
+			44
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 42,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-20": {
+		"id": 20,
+		"round_id": 1,
+		"region_id": 3,
+		"teams": [
+			36,
+			45
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 42,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-21": {
+		"id": 21,
+		"round_id": 1,
+		"region_id": 3,
+		"teams": [
+			38,
+			43
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 43,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-22": {
+		"id": 22,
+		"round_id": 1,
+		"region_id": 3,
+		"teams": [
+			35,
+			46
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 43,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-23": {
+		"id": 23,
+		"round_id": 1,
+		"region_id": 3,
+		"teams": [
+			39,
+			42
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 44,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-24": {
+		"id": 24,
+		"round_id": 1,
+		"region_id": 3,
+		"teams": [
+			34,
+			47
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 44,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-25": {
+		"id": 25,
+		"round_id": 1,
+		"region_id": 4,
+		"teams": [
+			64,
+			49
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 45,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-26": {
+		"id": 26,
+		"round_id": 1,
+		"region_id": 4,
+		"teams": [
+			56,
+			57
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 45,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-27": {
+		"id": 27,
+		"round_id": 1,
+		"region_id": 4,
+		"teams": [
+			53,
+			60
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 46,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-28": {
+		"id": 28,
+		"round_id": 1,
+		"region_id": 4,
+		"teams": [
+			52,
+			61
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 46,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-29": {
+		"id": 29,
+		"round_id": 1,
+		"region_id": 4,
+		"teams": [
+			54,
+			59
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 47,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-30": {
+		"id": 30,
+		"round_id": 1,
+		"region_id": 4,
+		"teams": [
+			51,
+			62
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 47,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-31": {
+		"id": 31,
+		"round_id": 1,
+		"region_id": 4,
+		"teams": [
+			55,
+			58
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 48,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-32": {
+		"id": 32,
+		"round_id": 1,
+		"region_id": 4,
+		"teams": [
+			50,
+			63
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 48,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-33": {
+		"id": 33,
+		"round_id": 1,
+		"region_id": 1,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 49,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-34": {
+		"id": 34,
+		"round_id": 1,
+		"region_id": 1,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 49,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-35": {
+		"id": 35,
+		"round_id": 1,
+		"region_id": 1,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 50,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-36": {
+		"id": 36,
+		"round_id": 1,
+		"region_id": 1,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 50,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-37": {
+		"id": 37,
+		"round_id": 1,
+		"region_id": 2,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 51,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-38": {
+		"id": 38,
+		"round_id": 1,
+		"region_id": 2,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 51,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-39": {
+		"id": 39,
+		"round_id": 1,
+		"region_id": 2,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 52,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-40": {
+		"id": 40,
+		"round_id": 1,
+		"region_id": 2,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 52,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-41": {
+		"id": 41,
+		"round_id": 1,
+		"region_id": 3,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 53,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-42": {
+		"id": 42,
+		"round_id": 1,
+		"region_id": 3,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 53,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-43": {
+		"id": 43,
+		"round_id": 1,
+		"region_id": 3,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 54,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-44": {
+		"id": 44,
+		"round_id": 1,
+		"region_id": 3,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 54,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-45": {
+		"id": 45,
+		"round_id": 1,
+		"region_id": 4,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 55,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-46": {
+		"id": 46,
+		"round_id": 1,
+		"region_id": 4,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 55,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-47": {
+		"id": 47,
+		"round_id": 1,
+		"region_id": 4,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 56,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-48": {
+		"id": 48,
+		"round_id": 1,
+		"region_id": 4,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 56,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-49": {
+		"id": 49,
+		"round_id": 1,
+		"region_id": 1,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 57,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-50": {
+		"id": 50,
+		"round_id": 1,
+		"region_id": 1,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 57,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-51": {
+		"id": 51,
+		"round_id": 1,
+		"region_id": 2,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 58,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-52": {
+		"id": 52,
+		"round_id": 1,
+		"region_id": 2,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 58,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-53": {
+		"id": 53,
+		"round_id": 1,
+		"region_id": 3,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 59,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-54": {
+		"id": 54,
+		"round_id": 1,
+		"region_id": 3,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 59,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-55": {
+		"id": 55,
+		"round_id": 1,
+		"region_id": 4,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 60,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-56": {
+		"id": 56,
+		"round_id": 1,
+		"region_id": 4,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 60,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-57": {
+		"id": 57,
+		"round_id": 1,
+		"region_id": 1,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 61,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-58": {
+		"id": 58,
+		"round_id": 1,
+		"region_id": 2,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 61,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-59": {
+		"id": 59,
+		"round_id": 1,
+		"region_id": 3,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 62,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-60": {
+		"id": 60,
+		"round_id": 1,
+		"region_id": 4,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 62,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-61": {
+		"id": 61,
+		"round_id": 1,
+		"region_id": 5,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 63,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-62": {
+		"id": 62,
+		"round_id": 1,
+		"region_id": 6,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": 63,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	},
+	"match-63": {
+		"id": 63,
+		"round_id": 1,
+		"region_id": null,
+		"teams": [
+			null,
+			null
+		],
+		"teams_are_real": true,
+		"selected_team_id": null,
+		"next_match_id": null,
+		"status": "pre-round",
+		"pick_enabled": true,
+		"current_point": 100,
+		"switching_point": 60,
+		"start_time": null,
+		"timer_type": null,
+		"timer_name": null,
+		"timerValue": null
+	}
+}

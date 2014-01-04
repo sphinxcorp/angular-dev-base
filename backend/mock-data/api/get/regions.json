@@ -1,0 +1,32 @@
+{
+	"region-1": {
+		"id": 1,
+		"name": "Midwest",
+		"short_name": "MDW"
+	},
+	"region-2": {
+		"id": 2,
+		"name": "East",
+		"short_name": "EST"
+	},
+	"region-3": {
+		"id": 3,
+		"name": "West",
+		"short_name": "WST"
+	},
+	"region-4": {
+		"id": 4,
+		"name": "South",
+		"short_name": "STH"
+	},
+	"region-5": {
+		"id": 5,
+		"name": "Midwest-West",
+		"short_name": "MDW-STH"
+	},
+	"region-6": {
+		"id": 6,
+		"name": "East-South",
+		"short_name": "EST-STH"
+	}
+}

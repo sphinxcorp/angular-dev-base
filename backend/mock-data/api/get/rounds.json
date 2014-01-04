@@ -1,0 +1,44 @@
+{
+	"round-1" : {
+		"id": 1,
+		"num_matches": 64,
+		"name" : "Round 64",
+		"short_name": "Rd 64"
+	},
+	"round-2" : {
+		"id": 2,
+		"num_matches": 32,
+		"name" : "Round 32",
+		"short_name": "Rd 32"
+	},
+	"round-3" : {
+		"id": 3,
+		"num_matches": 16,
+		"name" : "Round 16",
+		"short_name": "Rd 16"
+	},
+	"round-4" : {
+		"id": 4,
+		"num_matches": 8,
+		"name" : "Round 8",
+		"short_name": "Rd 8"
+	},
+	"round-5" : {
+		"id": 5,
+		"num_matches": 4,
+		"name" : "Round 4",
+		"short_name": "Rd 4"
+	},
+	"round-6" : {
+		"id": 6,
+		"num_matches": 2,
+		"name" : "Final Four",
+		"short_name": "Rd 2"
+	},
+	"round-7" : {
+		"id": 7,
+		"num_matches": 1,
+		"name" : "Championship",
+		"short_name": "Rd 1"
+	}
+}
