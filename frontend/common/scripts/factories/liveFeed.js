@@ -87,11 +87,11 @@
           eventName = _eventNS, 
           scope = $rootScope;
 
-        if(options.eventName && options.eventName !== _eventNS){
+        if(options && options.eventName && options.eventName !== _eventNS){
           eventName = _eventNS + ":" + options.eventName;
         }
 
-        if(options.scope){
+        if(options && options.scope){
           scope = options.scope;
         }
 

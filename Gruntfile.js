@@ -158,23 +158,13 @@
                 prod: {
                     files: [
                         {
-                            cwd: '.temp/',
-                            src: '**/*.{eot,svg,ttf,woff}',
-                            dest: 'dist/',
-                            expand: true
-                        }, {
-                            cwd: '.temp/',
-                            src: '**/*.{gif,jpeg,jpg,png,svg,webp}',
-                            dest: 'dist/',
+                            cwd: '.temp/assets/',
+                            src: '**/*',
+                            dest: 'dist/assets/',
                             expand: true
                         }, {
                             cwd: '.temp/',
                             src: ['**/ie.min.*.js', '**/scripts.min.*.js'],
-                            dest: 'dist/',
-                            expand: true
-                        }, {
-                            cwd: '.temp/',
-                            src: '**/*.css',
                             dest: 'dist/',
                             expand: true
                         }, {
@@ -189,7 +179,7 @@
             hash: {
                 images: '.temp/**/*.{gif,jpeg,jpg,png,svg,webp}',
                 scripts: ['.temp/phone/scripts/scripts.min.js', '.temp/tablet/scripts/scripts.min.js', '.temp/desktop/scripts/ie.min.js', '.temp/desktop/scripts/scripts.min.js'],
-                styles: '.temp/**/styles/styles.min.css'
+                styles: '.temp/assets/css/**/*.css'
             },
             imagemin: {
                 images: {
@@ -219,7 +209,7 @@
                 }
             },
             requirejs: {
-                phoneScripts: {
+                phone: {
                     options: {
                         baseUrl: '.temp/',
                         findNestedDependencies: true,
@@ -249,16 +239,7 @@
                         }
                     }
                 },
-                phoneStyles: {
-                    options: {
-                        baseUrl: '.temp/',
-                        cssIn: '.temp/phone/styles/styles.css',
-                        logLevel: 0,
-                        optimizeCss: 'standard',
-                        out: '.temp/phone/styles/styles.min.css'
-                    }
-                },
-                tabletScripts: {
+                tablet: {
                     options: {
                         baseUrl: '.temp/',
                         findNestedDependencies: true,
@@ -288,16 +269,7 @@
                         }
                     }
                 },
-                tabletStyles: {
-                    options: {
-                        baseUrl: '.temp/',
-                        cssIn: '.temp/tablet/styles/styles.css',
-                        logLevel: 0,
-                        optimizeCss: 'standard',
-                        out: '.temp/tablet/styles/styles.min.css'
-                    }
-                },
-                desktopScripts: {
+                desktop: {
                     options: {
                         baseUrl: '.temp/',
                         findNestedDependencies: true,
@@ -318,22 +290,13 @@
                         preserveLicenseComments: false,
                         skipModuleInsertion: true,
                         uglify: {
-                            no_mangle: true
+                            no_mangle: false
                         },
                         useStrict: true,
                         wrap: {
                             start: '(function(){\'use strict\';',
                             end: '}).call(this);'
                         }
-                    }
-                },
-                desktopStyles: {
-                    options: {
-                        baseUrl: '.temp/',
-                        cssIn: '.temp/desktop/styles/styles.css',
-                        logLevel: 0,
-                        optimizeCss: 'standard',
-                        out: '.temp/desktop/styles/styles.min.css'
                     }
                 }
             },
@@ -475,7 +438,7 @@
             },
             watch: {
                 basic: {
-                    files: ['frontend/fonts/**', 'frontend/images/**', 'frontend/scripts/**/*.js', 'frontend/styles/**/*.css', 'frontend/**/*.html'],
+                    files: ['frontend/assets/**', 'frontend/**/*.js', 'frontend/**/*.css', 'frontend/**/*.html'],
                     tasks: ['copy:app', 'copy:dev'],
                     options: {
                         livereload: true,
@@ -483,7 +446,7 @@
                     }
                 },
                 coffee: {
-                    files: 'frontend/scripts/**/*.{coffee,js}',
+                    files: 'frontend/**/*.{coffee,js}',
                     tasks: ['clean:working', 'copy:app', 'shimmer:phoneDev', 'shimmer:tabletDev', 'shimmer:desktopDev', 'coffee:app', 'copy:dev'],
                     options: {
                         livereload: true,

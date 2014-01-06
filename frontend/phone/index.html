@@ -6,14 +6,14 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title>Angular Fun</title>
-		<meta name="description" content="AngularJS Reference Architecture" />
+		<title>Realtime Brackets</title>
+		<meta name="description" content="Frontend Development Architecture" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<% if (config.environment && config.environment === 'prod') { %>
-			<link rel="stylesheet" href="<%= config.getHashedFile('./.temp/phone/styles/styles.min.css', {trim: './.temp'}) %>" />
+			<link rel="stylesheet" href="<%= config.getHashedFile('./.temp/assets/css/mobile/styles.css', {trim: './.temp'}) %>" />
 		<% } else { %>
-			<link rel="stylesheet" href="/phone/styles/styles.css" />
+			<link rel="stylesheet" href="/assets/css/mobile/styles.css" />
 		<% } %>
 
 		<!-- ClickJacking Defense begin (https://www.owasp.org/index.php/Clickjacking_Defense_Cheat_Sheet) -->

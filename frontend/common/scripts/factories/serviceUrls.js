@@ -19,10 +19,11 @@
 
   _urls.makePick = _baseUrl + "/make-pick"
   
-  Factory = function ($log) {
-  		return _urls;
+  Factory = function ($log, $rootScope) {
+    $rootScope.SERVICE_URLS = _urls; // register all urls to $rootScope for easy access from views
+  	return _urls;
   }
 
-  angular.module('app').factory('serviceUrls', ['$log', Factory]);
+  angular.module('app').factory('serviceUrls', ['$log', '$rootScope', Factory]);
 
 }).call(this);
