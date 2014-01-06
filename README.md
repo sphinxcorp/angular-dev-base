@@ -1,4 +1,4 @@
-# Realtime Brackets Frontend
+# Angular Development Base
 
 This project is based on a customized & extended version of the wonderful [AngularFun](https://github.com/CaryLandholt/AngularFun) reference architecture project, for angularjs based app development, that leverages modern technologies & build tools to ease development using requirejs based autoloading of app scripts, while minimizes all those resources in a minified version of script. It also establishes strong use of angular development best practices as well as modular architecture for development & management of large applications ensuring scalability. For more information, read the instructions in original [AngularFun](https://github.com/CaryLandholt/AngularFun) project, rest of the document and the supplied code.
 
@@ -21,7 +21,7 @@ This project is based on a customized & extended version of the wonderful [Angul
 
 ```
 frontend/
-├── assets 								-- assets from markup development project should be placed here
+├── assets 								-- all assets from asset development project should be placed here
 │   ├── css
 │   │   ├── desktop
 │   │   │   └── styles.css
