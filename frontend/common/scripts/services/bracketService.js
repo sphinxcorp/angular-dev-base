@@ -1,34 +1,35 @@
 (function() {
   var Service;
 
-  Service = (function() {
+  Service = (function(undefined) {
     function Service($rootScope, $log, $http, serviceUrls, messageService, $q) {
 
+      var loadAndCacheInitialData = function(){
+        var resourceTypes = Array.prototype.slice.call(arguments);
+
+        if(arguments.length === 0){
+          return null;
+        }
+
+        var resourceType = resourceTypes.shift();
+        var _this = this;
+
+        return $http.get(serviceUrls[resourceType])
+          .success(function(results) {
+            $log.info(resourceType + ' loaded successfully');
+            return messageService.publish('data:loaded', resourceType);
+          }).error(function(results) {
+            return $log.error('bracketService error: ' + resourceType, results);
+          }).then(function(results){
+            $rootScope["_" + resourceType] = results.data;
+            if(resourceTypes.length > 0){
+              return loadAndCacheInitialData.apply(_this, resourceTypes);
+            }
+            return $rootScope["_" + resourceType];
+          });
+      };
+
       var bracketService = {
-        getData: function(){
-          var resourceTypes = Array.prototype.slice.call(arguments);
-
-          if(arguments.length === 0){
-            return null;
-          }
-
-          var resourceType = resourceTypes.shift();
-          var _this = this;
-
-          return $http.get(serviceUrls[resourceType])
-            .success(function(results) {
-              $log.info(resourceType + ' loaded successfully');
-              return messageService.publish('data:loaded', resourceType);
-            }).error(function(results) {
-              return $log.error('bracketService error: ' + resourceType, results);
-            }).then(function(results){
-              $rootScope["__" + resourceType] = results.data;
-              if(resourceTypes.length > 0){
-                return bracketService.getData.apply(_this, resourceTypes);
-              }
-              return $rootScope["__" + resourceType];
-            });
-        },
         loadBrackets: function($purge) {
           $purge = !!$purge;
 
@@ -45,10 +46,10 @@
 
           $log.info('loading brackets');
 
-          return bracketService.getData.call(this, 'rounds', 'regions', 'teams', 'brackets');
+          return loadAndCacheInitialData.call(this, 'rounds', 'regions', 'teams', 'brackets');
         },
         bracketsLoaded: function(){
-          return !!$rootScope.__brackets;
+          return !!$rootScope._brackets;
         },
         updateMatchStates: function(bracket, matchStates){
           if(!bracketService.bracketsLoaded()){
@@ -60,66 +61,119 @@
           var bracket = bracketService.getBracket(bracket);
           matchStates = angular.isArray(matchStates)?matchStates:[matchStates];
           angular.forEach(matchStates, function(matchState){
-            if(bracket['match-' + matchState.id]){
-              angular.extend(bracket['match-' + matchState.id], matchState);
+            var match = bracketService.getMatch(bracket, matchState.id);
+            if(match){
+              angular.extend(match, matchState);
             }
           });
         }
       };
 
-      var accessorMethods = {
+      var utilityMethods = {
+        filterByProp: function(objects, propName, propValue){
+          var filtered = [];
+          angular.forEach(objects, function(obj){
+            if((angular.isArray(propValue) && propValue.indexOf(obj[propName])>=0) || obj[propName] === propValue) {
+              filtered.push(obj);
+            }
+          });
+
+          return filtered;
+        },
+        groupByProp: function(objects, propName){
+          var hash = {};
+          var hashValues = [];
+          angular.forEach(objects, function(obj){
+            var propValue = obj[propName];
+            var hashKey = propName + '-' + propValue;
+            if(undefined === hash[hashKey]){
+              hashValues.push(propValue);
+              hash[hashKey] = [];
+            }
+            hash[hashKey].push(obj);
+          });
+          return {
+            "hashValues": hashValues,
+            "hash": hash
+          };
+        },
+        hashToArray: function(hash){
+          var arr = [];
+          angular.forEach(hash, function(value){
+            arr.push(value);
+          });
+          return arr;
+        }
+      }
+
+      var dataAccessMethods = {
         getBrackets: function(){
-          if($rootScope.__brackets){
-            return $rootScope.__brackets;
+          if($rootScope._brackets){
+            return $rootScope._brackets;
           }
-          return {};
+          return [];
         },
         getBracket: function(bracketName){
           if(bracketService.bracketsLoaded()){
-            return $rootScope.__brackets[bracketName];
+            return $rootScope._brackets[bracketName];
           }
-          return {};
+          return null;
         },
-        getRounds: function(){
-          if($rootScope.__rounds){
-            return $rootScope.__rounds;
+        getMatch: function(bracket, matchId){
+          if(typeof bracket === 'string'){
+            bracket = this.getBracket(bracket);
           }
-          return {};
+
+          if(!bracket || bracket['matches'] === undefined){
+              return null;
+          }
+          return bracket.matches["match-" + matchId];
+        },
+        getRounds: function(asArray){
+          asArray = !!asArray;
+          if($rootScope._rounds){
+            return asArray?utilityMethods.hashToArray($rootScope._rounds):$rootScope._rounds;
+          }
+          return null;
         },
         getRound: function(id){
-          if($rootScope.__rounds){
-            return $rootScope.__rounds['round-' + id];
+          if($rootScope._rounds){
+            return $rootScope._rounds["round-" + id];
           }
-          return {};
+          return null;
         },
-        getRegions: function(){
-          if($rootScope.__regions){
-            return $rootScope.__regions;
+        getRegions: function(asArray){
+          asArray = !!asArray;
+          if($rootScope._regions){
+            return asArray?utilityMethods.hashToArray($rootScope._regions):$rootScope._regions;
           }
-          return {};
+          return null;
         },
         getRegion: function(id){
-          if($rootScope.__regions){
-            return $rootScope.__regions['region-' + id];
+          if($rootScope._regions){
+            return $rootScope._regions["region-" + id];
           }
-          return {};
+          return null;
         },
-        getTeams: function(){
-          if($rootScope.__teams){
-            return $rootScope.__teams;
+        getTeams: function(asArray){
+          asArray = !!asArray;
+          if($rootScope._teams){
+            return asArray?utilityMethods.hashToArray($rootScope._teams):$rootScope._teams;
           }
-          return {};
+          return null;
         },
         getTeam: function(id){
-          if($rootScope.__teams){
-            return $rootScope.__teams['team-' + id];
+          if($rootScope._teams){
+            return $rootScope._teams["team-" + id];
           }
-          return {};
+          return null;
         }
       };
 
-      angular.extend($rootScope, accessorMethods);
-      angular.extend(bracketService, accessorMethods);
+      /* Expose common data access methods to both $rootScope and bracketService objects */
+
+      angular.extend($rootScope, dataAccessMethods, utilityMethods);
+      angular.extend(bracketService, dataAccessMethods);
 
       return bracketService;
     }

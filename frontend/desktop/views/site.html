@@ -6,7 +6,31 @@
 </div>
 
 <div class="container">
-	<div class="row">
-		<pre>{{getBracket('live')['match-1']}}</pre>
+	<div ng-repeat="(bracketName, bracket) in getBrackets()">
+		<h2>{{bracket.name}} bracket</h2>
+		<div ng-repeat="round in getRounds(true)" ng-init="roundMatches = filterByProp(bracket.matches,'round_id', round.id); regionalHash = groupByProp(roundMatches, 'region_id')">
+			<h3>{{round.name}}</h3>
+			<div class="row" ng-repeat="region_id in regionalHash.hashValues" ng-init="region = getRegion(region_id); regionalMatches = regionalHash.hash['region_id-' + region_id]">
+				<h4>{{region.name}}</h4>
+				<div ng-repeat="match in regionalMatches | orderBy:'id'" class="col-md-6">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<dl class="dl-horizontal">
+								<dt>Region</dt>
+								<dd>{{getRegion(match.region_id).name}}</dd>
+								<dt>Round</dt>
+								<dd>{{getRound(match.round_id).name}}</dd>
+								<dt>Teams</dt>
+								<dd>{{getTeam(match.teams[0]).name}} vs {{getTeam(match.teams[1]).name}}</dd>
+								<dt>Status</dt>
+								<dd>{{match.status}}</dd>
+								<dt>Pick enabled??</dt>
+								<dd>{{match.pick_enabled && "yes" || "no"}}</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>

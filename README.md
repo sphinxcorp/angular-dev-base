@@ -123,3 +123,4 @@ backend
 * All angular components must be registered with array notaion to specify their dependency explicitly. No auto-discovery will be supported in production build. Look at the existing files in **common** folder for reference implementations.
 * Update **index.html** files with actual asset references when assets will be imported from markup project
 * Review, understand & play with provided code before starting with the actual implementation
+* The the sample implemntation as a reference but we always appreciate best possible code. So, feel free to update any part of provided code to improve performance, maintainability or extensibility.
