@@ -14,13 +14,26 @@ var round1TeamSeeds = [
 	[16,1], [8,9], [5,12], [4,13], [6,11], [3,14], [7,10], [2,15]
 ];
 
+var randomChoice = function(choices){
+	return choices[Math.floor((Math.random()*10000))%choices.length];
+}
+
+var randomInt = function(max, min){
+	if(!min){
+		min = 0; 
+	}
+	return Math.floor((Math.random()*10000)+min)%max;
+}
+
 var createMatchObject = function(matchId, roundId, regionId, team1Id, team2Id, nextMatchId){
-	bracket.matches["match-" + matchId] = {
+	var match = {
 		"id": matchId,
 		"round_id": roundId,
 		"region_id": regionId,
 		"teams": [team1Id, team2Id],
-		"teams_are_real": true,
+		"teams_are_real": [true, false],
+		"scores": [null, null],
+		"winner_team_id": null,
 		"selected_team_id": null,
 		"next_match_id": nextMatchId,
 		"status": "pre-round",
@@ -28,11 +41,26 @@ var createMatchObject = function(matchId, roundId, regionId, team1Id, team2Id, n
 		"pick_lock_reason": null,
 		"current_point": 100,
 		"switching_point": 60,
+		"match_date": null,
 		"start_time": null,
 		"timer_type": null,
 		"timer_name": null,
 		"timer_value": null
 	};
+
+	match.selected_team_id = randomChoice([null, team1Id, team2Id]);
+	match.pick_enabled = randomChoice([true, false]);
+	match.status = randomChoice(['pre-selection-sunday', 'pre-round', 'pre-match', 'in-game', 'timeout', 'final']);
+	match.current_point = randomChoice([100, 90, 80, 70, 60, 50, 40, 30, 20]);
+	match.switching_point = randomChoice([100, 90, 80, 70, 60, 50, 40, 30, 20]);
+	match.timer_type = randomChoice(['matchtime', 'timout']);
+
+	if(match.status === 'final'){
+		match.scores = [randomInt(100), randomInt(100)];
+		match.winner_team_id = match.scores[0]>match.scores[1]?team1Id:(match.scores[0]<match.scores[1]?team2Id:null);
+	}
+
+	bracket.matches["match-" + matchId] = match;
 }
 
 // round-1 matches
