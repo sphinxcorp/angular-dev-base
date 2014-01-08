@@ -50,10 +50,10 @@ var createMatchObject = function(matchId, roundId, regionId, team1Id, team2Id, n
 
 	match.selected_team_id = randomChoice([null, team1Id, team2Id]);
 	match.pick_enabled = randomChoice([true, false]);
-	match.status = randomChoice(['pre-selection-sunday', 'pre-round', 'pre-match', 'in-game', 'timeout', 'final']);
+	match.status = randomChoice(['pre-selection-sunday', 'pre-round', 'pre-game', 'in-game', 'timeout', 'final']);
 	match.current_point = randomChoice([100, 90, 80, 70, 60, 50, 40, 30, 20]);
 	match.switching_point = randomChoice([100, 90, 80, 70, 60, 50, 40, 30, 20]);
-	match.timer_type = randomChoice(['matchtime', 'timout']);
+	match.timer_type = randomChoice([null, 'matchtime', 'timeout']);
 
 	if(match.status === 'final'){
 		match.scores = [randomInt(100), randomInt(100)];
