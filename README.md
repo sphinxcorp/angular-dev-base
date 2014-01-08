@@ -122,5 +122,6 @@ backend
 * All view (.html) files must be referenced in other views or routes with urls starting with **/**. This is crucial for the minified build to work, that will embed all view files into the minified script & put into the templace cache.
 * All angular components must be registered with array notaion to specify their dependency explicitly. No auto-discovery will be supported in production build. Look at the existing files in **common** folder for reference implementations.
 * Update **index.html** files with actual asset references when assets will be imported from markup project
-* Review, understand & play with provided code before starting with the actual implementation
+* Review, understand & play with provided code before starting with the actual implementation. 
+* **Note** that all data provided by current mockup backend are based on very intial level of analysis, and the final data format might very. Also the frontend team might have their suggestions about the data format & structure, that will be considered positively by the backened developers, if that doesn't violate any constraint for the backend architecture or business logic. So, please come up with suggestions about the data format & structure & discuss as necessary to finalize.
 * The the sample implemntation as a reference but we always appreciate best possible code. So, feel free to update any part of provided code to improve performance, maintainability or extensibility.
