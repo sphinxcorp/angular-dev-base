@@ -472,13 +472,15 @@
 
         grunt.event.on('watch', function(action, filepath, key) {
             var basename, coffeeConfig, copyDevConfig, dirname, ext, file, path;
+            var srcPath = 'frontend/';
             path = require('path');
-            file = filepath.substr(4);
+            file = filepath.substr(srcPath.length);
+            console.log('processing file ' + file);
             dirname = path.dirname(file);
             ext = path.extname(file);
             basename = path.basename(file, ext);
             grunt.config(['copy', 'app'], {
-                cwd: 'frontend/',
+                cwd: srcPath,
                 src: file,
                 dest: '.temp/',
                 expand: true

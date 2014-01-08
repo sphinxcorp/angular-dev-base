@@ -1,33 +1,76 @@
+if(process.argv.length < 3){
+	console.log('USAGE: node gen-bracket.js bracket-name');
+	process.exit(1);
+}
+
 var fs = require('fs');
 
-var regions = JSON.parse(fs.readFileSync(__dirname + "/regions.json"));
-var rounds = JSON.parse(fs.readFileSync(__dirname + "/rounds.json"));
-var teams = JSON.parse(fs.readFileSync(__dirname + "/teams.json"));
-
-var matches = {}
+var bracket = {
+	"name": process.argv[2],
+	"matches": {}
+}
 
 var round1TeamSeeds = [
 	[16,1], [8,9], [5,12], [4,13], [6,11], [3,14], [7,10], [2,15]
 ];
 
+var randomChoice = function(choices){
+	return choices[Math.floor((Math.random()*100000))%choices.length];
+}
+
+var randomInt = function(max, min){
+	if(!min){
+		min = 0; 
+	}
+	return Math.floor((Math.random()*100000))%max + min;
+}
+
 var createMatchObject = function(matchId, roundId, regionId, team1Id, team2Id, nextMatchId){
-	matches['match-' + matchId] = {
+	var match = {
 		"id": matchId,
-		"round_id": 1,
+		"round_id": roundId,
 		"region_id": regionId,
 		"teams": [team1Id, team2Id],
-		"teams_are_real": true,
+		"teams_are_real": [true, false],
+		"scores": [null, null],
+		"winner_team_id": null,
 		"selected_team_id": null,
 		"next_match_id": nextMatchId,
 		"status": "pre-round",
 		"pick_enabled": true,
+		"pick_lock_reason": null,
 		"current_point": 100,
 		"switching_point": 60,
+		"match_date": null,
 		"start_time": null,
 		"timer_type": null,
 		"timer_name": null,
-		"timerValue": null
+		"timer_value": null
 	};
+
+	match.selected_team_id = randomChoice([null, team1Id, team2Id]);
+	match.pick_enabled = randomChoice([true, false]);
+	match.status = randomChoice(['pre-selection-sunday', 'pre-round', 'pre-game', 'in-game', 'timeout', 'final']);
+	match.current_point = randomChoice([100, 90, 80, 70, 60, 50, 40, 30, 20]);
+	match.switching_point = randomChoice([100, 90, 80, 70, 60, 50, 40, 30, 20]);
+
+	if(match.status === 'in-game'){
+		match.timer_type = 'match-timer';
+		match.timer_name = 'In Play';
+		match.timer_value = randomInt(45*60,1);
+	}
+	else if(match.status === 'timeout'){
+		match.timer_type = 'countdown-timer';
+		match.timer_name = 'TV Timeout ' + randomInt(6,1);
+		match.timer_value = randomInt(120,1);	
+	}
+
+	if(match.status === 'final'){
+		match.scores = [randomInt(100), randomInt(100)];
+		match.winner_team_id = match.scores[0]>match.scores[1]?team1Id:(match.scores[0]<match.scores[1]?team2Id:null);
+	}
+
+	bracket.matches["match-" + matchId] = match;
 }
 
 // round-1 matches
@@ -89,7 +132,6 @@ for (var regionId = 5; regionId <= 6; regionId++) {
 
 createMatchObject(matchId, 6, null, null, null, null);
 
-
-console.log(JSON.stringify(matches,null,"\t"));
+console.log(JSON.stringify(bracket,null,"\t"));
 
 	
