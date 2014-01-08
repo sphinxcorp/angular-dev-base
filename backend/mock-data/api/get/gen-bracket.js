@@ -15,14 +15,14 @@ var round1TeamSeeds = [
 ];
 
 var randomChoice = function(choices){
-	return choices[Math.floor((Math.random()*10000))%choices.length];
+	return choices[Math.floor((Math.random()*100000))%choices.length];
 }
 
 var randomInt = function(max, min){
 	if(!min){
 		min = 0; 
 	}
-	return Math.floor((Math.random()*10000)+min)%max;
+	return Math.floor((Math.random()*100000))%max + min;
 }
 
 var createMatchObject = function(matchId, roundId, regionId, team1Id, team2Id, nextMatchId){
@@ -53,7 +53,17 @@ var createMatchObject = function(matchId, roundId, regionId, team1Id, team2Id, n
 	match.status = randomChoice(['pre-selection-sunday', 'pre-round', 'pre-game', 'in-game', 'timeout', 'final']);
 	match.current_point = randomChoice([100, 90, 80, 70, 60, 50, 40, 30, 20]);
 	match.switching_point = randomChoice([100, 90, 80, 70, 60, 50, 40, 30, 20]);
-	match.timer_type = randomChoice([null, 'matchtime', 'timeout']);
+
+	if(match.status === 'in-game'){
+		match.timer_type = 'match-timer';
+		match.timer_name = 'In Play';
+		match.timer_value = randomInt(45*60,1);
+	}
+	else if(match.status === 'timeout'){
+		match.timer_type = 'countdown-timer';
+		match.timer_name = 'TV Timeout ' + randomInt(6,1);
+		match.timer_value = randomInt(120,1);	
+	}
 
 	if(match.status === 'final'){
 		match.scores = [randomInt(100), randomInt(100)];
