@@ -1,6 +1,21 @@
 # Angular Development Base
 
-This project is based on a customized & extended version of the wonderful [AngularFun](https://github.com/CaryLandholt/AngularFun) reference architecture project, for angularjs based app development, that leverages modern technologies & build tools to ease development using requirejs based autoloading of app scripts, while minimizes all those resources in a minified version of script. It also establishes strong use of angular development best practices as well as modular architecture for development & management of large applications ensuring scalability. For more information, read the instructions in original [AngularFun](https://github.com/CaryLandholt/AngularFun) project, rest of the document and the supplied code.
+This project is a reference architecture based on a customized & extended version of the wonderful [AngularFun](https://github.com/CaryLandholt/AngularFun) project, for multi-interface angular applications, that leverages modern technologies & build tools to ease development using requirejs based autoloading of app scripts during development, while minimizes all those resources in a minified version of script for production use. It also establishes strong use of angular development best practices as well as modular architecture for development & management of large applications ensuring scalability. Also this type of architecture can be really useful, when used with different technologies in fronend & backend, for example the host page & rest api is provided by PHP/python/rails backend, where as websocket functionality is provided by node server.
+
+For more information, read the instructions in original [AngularFun](https://github.com/CaryLandholt/AngularFun) project, rest of the document and the supplied code.
+
+## Feature summary
+
+* Use of modern build tools including grunt, bower and all the nodejs goodies
+* Support for development & production environment as build targets
+* De-coupled architecture for backend & frontend, that enables easy replacement with production backend with almost zero code change (all backend service urls are provided by a configuration like serviceUrls service, that need to be updated to the right url base)
+* Device specific multi-interface application development with common codebase
+* Seperation of presentation assets that can be developed & imported from other project's build output
+* A real nodejs backend with mocking rest api & websocket functionality
+* Frontend websocket integration using sockjs-client library, which is used by frameworks like meteor 
+* Minified scripts, leaving out requirejs related stuffs, for production environment that also embeds all views put into angular template cache, that means zero request for script & view loading after initial load.
+* Built-in css & image optimization support during production build
+* Watch & liverealod support during development
 
 ## Setup Instructions
 
